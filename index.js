@@ -8,6 +8,7 @@ const customers = require('./routes/customers');
 const movie = require('./routes/movies');
 const rental = require('./routes/rentals');
 const user = require('./routes/users');
+const auth = require('./routes/auth');
 
 mongoose.connect('mongodb://localhost/vildy',{
 	 useNewUrlParser: true,
@@ -23,6 +24,7 @@ app.use('/api/customers',customers)
 app.use('/api/movies',movie)
 app.use('/api/rentals',rental)
 app.use('/api/users',user)
+app.use('/api/login',auth)
 
 const port = process.env.PORT || 3000;
 app.listen(port , () => console.log(`Listening on port ${port}...`))
