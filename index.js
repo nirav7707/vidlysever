@@ -1,4 +1,5 @@
 const Joi = require("joi")
+const config = require("config")
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require("mongoose")
 const express = require("express")
@@ -9,6 +10,11 @@ const movie = require('./routes/movies');
 const rental = require('./routes/rentals');
 const user = require('./routes/users');
 const auth = require('./routes/auth');
+
+if (!config.get("jwtPrivateKey")){
+	console.log("FATAL ERROR : jwtPrivateKey is not defined.")
+	process.exit(1);
+}
 
 mongoose.connect('mongodb://localhost/vildy',{
 	 useNewUrlParser: true,
