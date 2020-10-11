@@ -22,8 +22,9 @@ router.post('/',async(req,res)=>{
     userinfo.password = await bcrypt.hash(req.body.password,salt)
 
     user = await User.create(userinfo);
+    const token = user.generateAuthToken();
     
-    res.send(_.pick(user , ['_id','name','email']))
+    res.header('x-auth-tokent',token).send(_.pick(user , ['_id','name','email']))
 })
 
 module.exports = router;
