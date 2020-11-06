@@ -11,23 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eefd308-2a2e-42fa-b810-8c528765678d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/genre.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/genre.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/rental.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/rental.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/customers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/genres.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/genres.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/rentals.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/rentals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/logging.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/logging.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/startup/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uncaughtExceptions.log" beforeDir="false" afterPath="$PROJECT_DIR$/uncaughtExceptions.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +109,7 @@
       <workItem from="1603875652360" duration="3746000" />
       <workItem from="1604077550525" duration="13412000" />
       <workItem from="1604140367552" duration="7009000" />
-      <workItem from="1604570772464" duration="18959000" />
+      <workItem from="1604570772464" duration="19087000" />
     </task>
     <servers />
   </component>
