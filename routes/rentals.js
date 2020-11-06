@@ -6,6 +6,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const Fawn = require("fawn")
 const router = express.Router()
+const validate =require('../middleware/validate')
 
 Fawn.init(mongoose);
 
@@ -14,9 +15,9 @@ router.get('/',async (req,res)=>{
     res.send(rental);
 })
 
-router.post('/',auth,async (req,res)=>{
-    const {error} = validateRental(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
+router.post('/',[auth,validate(validateRental)],async (req,res)=>{
+    // const {error} = validateRental(req.body);
+    // if(error) return res.status(400).send(error.details[0].message);
 
     const customer = await Customer.findById(req.body.customerId);
     if (!customer) return res.status(400).send("Invalid customer ID");

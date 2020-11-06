@@ -4,15 +4,15 @@ const mongoose =  require('mongoose');
 const express = require("express")
 const auth = require('../middleware/auth')
 const router = express.Router();
-
+const validate =require('../middleware/validate')
 router.get('/', async (req,res) =>{
     const movie = await Movie.find();
     res.send(movie)
 });
 
-router.post('/',auth, async (req,res)=>{
-    const {error} = validateMovie(req.body);
-    if(error) return res.status(400).send(error.details[0].message);
+router.post('/',[auth,validate(validateMovie)], async (req,res)=>{
+    // const {error} = validateMovie(req.body);
+    // if(error) return res.status(400).send(error.details[0].message);
 
     const genre = await Genre.findById(req.body.genreId);
     if(!genre) return res.status(400).send("Invalid Id");

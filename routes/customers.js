@@ -1,4 +1,5 @@
 const auth = require('../middleware/auth')
+const validate = require('../middleware/validate')
 
 const express = require('express')
 const router = express.Router()
@@ -9,9 +10,8 @@ router.get('/',async (req,res)=>{
   res.send(customer);
 })
 
-router.post('/',auth,async (req,res)=>{
-  const {error} = validateCustomer(req.body);
-  if(error) return res.status(400).send(error.details[0].message);
+router.post('/',[auth,validate(validateCustomer)],async (req,res)=>{
+
 
   let customer = await Customer.create(req.body);
   res.send(customer)

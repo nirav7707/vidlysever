@@ -4,15 +4,16 @@ const express = require("express")
 const mongoose = require("mongoose")
 const {User,validateUser} = require('../models/user');
 const router = express.Router();
+const validate = require('../middleware/validate')
 
 router.get('/', async(req,res)=>{
     const users = await User.find();
     res.send(users)
 })
 
-router.post('/',async(req,res)=>{
-    const {error} = validateUser(req.body);
-    if(error) return res.status(400).send(error.details[0].message)
+router.post('/',validate(validateUser),async(req,res)=>{
+    // const {error} = validateUser(req.body);
+    // if(error) return res.status(400).send(error.details[0].message)
 
     let user = await User.findOne({email:req.body.email})
     if(user) return res.status(400).send("user already registered")
@@ -24,7 +25,7 @@ router.post('/',async(req,res)=>{
     user = await User.create(userinfo);
     const token = user.generateAuthToken();
     
-    res.header('x-auth-tokent',token).send(_.pick(user , ['_id','name','email']))
+    res.header('x-auth-token',token).send(_.pick(user , ['_id','name','email']))
 })
 
 module.exports = router;
