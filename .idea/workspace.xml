@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7eefd308-2a2e-42fa-b810-8c528765678d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/custom-environment-variables.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/custom-environment-variables.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +109,7 @@
       <workItem from="1603875652360" duration="3746000" />
       <workItem from="1604077550525" duration="13412000" />
       <workItem from="1604140367552" duration="7009000" />
-      <workItem from="1604570772464" duration="19087000" />
+      <workItem from="1604570772464" duration="20875000" />
     </task>
     <servers />
   </component>
