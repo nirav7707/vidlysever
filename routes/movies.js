@@ -6,6 +6,7 @@ const auth = require('../middleware/auth')
 const router = express.Router();
 const validate =require('../middleware/validate');
 const admin = require('../middleware/admin');
+const validateObjectId = require("../middleware/validateObjectid")
 router.get('/', async (req,res) =>{
     const movie = await Movie.find();
     res.send(movie)
